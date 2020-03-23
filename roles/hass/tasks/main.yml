@@ -1,0 +1,7 @@
+---
+  
+- name: "Download HASS Image"
+  docker_image:
+    name: homeassistant/home-assistant
+    source: pull
+

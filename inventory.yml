@@ -1,0 +1,12 @@
+---
+
+all:
+  hosts:
+    192.168.1.101
+  vars:
+    country_name: "US"
+    state_name: "New Mexico"
+    city_name: "Albuquerque"
+    org_name: "Parkins Family"
+    org_unit_name: "Owen"
+    cn: "raspi"

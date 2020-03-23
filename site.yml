@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  remote_user: oparkins
+  become: yes
+  roles:
+  - common	
+  - hass
+  - mqtt
+  - docker

@@ -1,0 +1,12 @@
+---
+
+- name: "Copy DockerFile"
+  copy:
+    src: files/docker-compose.yml
+    dest: /srv/docker-compose.yml
+
+
+- name: "Start Services"
+  docker_compose:
+    project_src: /srv/
+    restarted: yes

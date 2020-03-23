@@ -1,0 +1,28 @@
+---
+
+- name: "Install Required Packages"
+  apt:
+    pkg:
+      - python3
+      - python3-pip
+    state: present
+
+- name: Download Docker Install Script
+  get_url:
+    url: https://get.docker.com
+    dest: /tmp/install.docker.sh
+    mode: 0700
+
+- name: "Run Docker Install Script"
+  shell:
+    cmd: /tmp/install.docker.sh
+
+- name: "Install Python Docker Tools"
+  apt:
+    pkg: python-docker
+    state: present
+
+- name: "Install docker-compose"
+  pip:
+    name: "docker-compose"
+    executable: pip3
